@@ -1,0 +1,46 @@
+{
+  "name": "temporal-from-now",
+  "version": "0.0.1-2",
+  "repository": "https://github.com/paleite/temporal-from-now.git",
+  "license": "MIT",
+  "author": "Patrick Eriksson <paleite@users.noreply.github.com> (https://github.com/paleite)",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    ".github/ISSUE_TEMPLATE/feature_request.md",
+    "/dist/",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "clean": "tsc --build tsconfig.build.json --clean",
+    "lint": "eslint --cache --ext .js,.ts,.tsx --format codeframe .",
+    "format": "prettier --write .",
+    "postinstall": "yarn build; husky install",
+    "postpublish": "pinst --enable",
+    "prepublishOnly": "pinst --disable",
+    "publish-canary": "np prerelease --tag=canary",
+    "publish-stable": "np",
+    "test": "jest",
+    "typecheck": "tsc --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.1",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.3.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
+    "eslint-plugin-diff": "^1.0.11",
+    "eslint-plugin-jest": "^24.3.6",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.0.0",
+    "np": "^7.5.0",
+    "pinst": "^2.1.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.5"
+  }
+}
