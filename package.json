@@ -22,10 +22,11 @@
     "prepublishOnly": "pinst --disable",
     "publish-canary": "np prerelease --tag=canary",
     "publish-stable": "np",
-    "test": "jest --coverage",
+    "test": "jest",
     "typecheck": "tsc --project tsconfig.json"
   },
   "devDependencies": {
+    "@js-temporal/polyfill": "^0.1.0",
     "@tsconfig/node14": "^1.0.1",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.3.1",
