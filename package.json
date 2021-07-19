@@ -22,7 +22,7 @@
     "prepublishOnly": "pinst --disable",
     "publish-canary": "np prerelease --tag=canary",
     "publish-stable": "np",
-    "test": "jest",
+    "test": "jest --coverage",
     "typecheck": "tsc --project tsconfig.json"
   },
   "devDependencies": {
